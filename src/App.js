@@ -10,7 +10,6 @@ import useStyles from "./styles";
 function App() {
   const [activeArticle, setActiveArticle] = useState(0);
   const [newsArticles, setNewsArticles] = useState([]);
-  const [isOpen, setIsOpen] = useState(false);
 
   const classes = useStyles();
 
@@ -23,7 +22,7 @@ function App() {
           setActiveArticle(-1);
           console.log("articles");
         } else if (command === "instructions") {
-          setIsOpen(true);
+          // setIsOpen(true);
         } else if (command === "highlight") {
           setActiveArticle((prevActiveArticle) => prevActiveArticle + 1);
         } else if (command === "open") {
@@ -74,7 +73,6 @@ function App() {
         />
       </div>
       <NewsCards articles={newsArticles} activeArticle={activeArticle} />
-      {/* <Modal isOpen={isOpen} setIsOpen={setIsOpen} /> */}
       {!newsArticles.length ? (
         <div className={classes.footer}>
           <Typography variant="body1" component="h2">
