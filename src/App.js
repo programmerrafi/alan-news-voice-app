@@ -21,7 +21,7 @@ function App() {
         if (command === "newHeadlines") {
           setNewsArticles(articles);
           setActiveArticle(-1);
-          // console.log(articles);
+          console.log("articles");
         } else if (command === "instructions") {
           setIsOpen(true);
         } else if (command === "highlight") {
